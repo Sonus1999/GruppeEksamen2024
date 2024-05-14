@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Layout from './components/Layout'
 import Home from './components/Home'
 import Teams from './components/Teams'
@@ -8,7 +7,6 @@ import Pokemon from './components/Pokemon'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
