@@ -4,14 +4,19 @@ import { Link } from 'react-router-dom'
 
 export default function Home(){
     const [pokemon, setPokemon] = useState([])
+    const [types, setTypes] = useState([]);
 
     useEffect(() => {
         fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
           .then(response => response.json())
           .then(data => setPokemon(data.results))
+
+          fetch('https://pokeapi.co/api/v2/type')
+          .then(response => response.json())
+          .then(data => setTypes(data.results));
       }, [])
 
-      console.log(pokemon)
+      console.log(types)
     return(
         <>
         <section>
@@ -24,6 +29,11 @@ export default function Home(){
         </section>
         <section>
             <h2>TYPES</h2>
+            {types.map(type =>(
+                <p key={type.name}>
+                    <Link to={`/${type.name}`}>{type.name}</Link>
+                </p>
+            ))}
         </section>
         </>
     )
