@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 export default function Type() {
   const { type } = useParams()
@@ -13,7 +13,12 @@ export default function Type() {
 
   return (
     <>
-
+      <h1>{type}</h1>
+      {pokemon.map((pokemon, index) => (
+        <p key={index}>
+          <Link to={`/pokemons/${pokemon.pokemon.name}`}>{pokemon.pokemon.name}</Link>
+        </p>
+      ))}
     </>
   )
 }
