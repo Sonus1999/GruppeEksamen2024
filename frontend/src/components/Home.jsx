@@ -1,6 +1,6 @@
 import PokeCard from './PokeCard'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import TypeCard from './TypeCard';
 
 export default function Home(){
     const [pokemon, setPokemon] = useState([])
@@ -10,6 +10,7 @@ export default function Home(){
         fetch('https://pokeapi.co/api/v2/pokemon?limit=9')
           .then(response => response.json())
           .then(data => setPokemon(data.results))
+        
 
           fetch('https://pokeapi.co/api/v2/type')
           .then(response => response.json())
@@ -19,20 +20,22 @@ export default function Home(){
       console.log(types)
     return(
         <>
-        <section>
+        <section className='pokemondisplay'>
             <h1>MAIN POKEMONS</h1>
-            {pokemon.map(singlepoke =>(
-                <p key={singlepoke.name}>
-                    <Link to={`/pokemons/${singlepoke.name}`}>{singlepoke.name}</Link>
-                </p>
+            {pokemon?.map(singlepoke =>(
+                <PokeCard
+                key={singlepoke.name}
+                name={singlepoke.name}
+                ></PokeCard>
             ))}
         </section>
-        <section>
+        <section className='typesdisplay'>
             <h2>TYPES</h2>
-            {types.map(type =>(
-                <p key={type.name}>
-                    <Link to={`/${type.name}`}>{type.name}</Link>
-                </p>
+            {types?.map(type =>(
+                <TypeCard 
+                key={type.name}
+                name={type.name}>
+                </TypeCard>
             ))}
         </section>
         </>
