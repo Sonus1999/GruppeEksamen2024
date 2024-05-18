@@ -10,6 +10,10 @@ export default function PokeCard({name, url}){
           .catch(error => console.error('Error fetching Pokemon data:', error));
     }, [url])
 
+    const formatId = (id) => {
+        return id.toString().padStart(3, '0'); // Ensure ID has at least 3 digits
+    }
+
     return(
         <>
         {pokemonInfo ? (
@@ -18,7 +22,7 @@ export default function PokeCard({name, url}){
                     <Link to={`/pokemons/${name}`}>{name}</Link>
                 </p>
                 <img src={pokemonInfo.sprites.front_default} alt={pokemonInfo.name} />
-                <p>#00{pokemonInfo.id}</p>
+                <p>#{formatId(pokemonInfo.id)}</p>
             </article>
         ) : (
             <p>Loading...</p>
