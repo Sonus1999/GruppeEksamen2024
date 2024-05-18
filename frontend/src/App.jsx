@@ -1,3 +1,4 @@
+import './styles/main.scss'
 import Layout from './components/Layout'
 import Home from './components/Home'
 import Teams from './components/Teams'
