@@ -26,6 +26,7 @@ export default function Home(){
                 <PokeCard
                 key={singlepoke.name}
                 name={singlepoke.name}
+                url={singlepoke.url}
                 ></PokeCard>
             ))}
         </section>
