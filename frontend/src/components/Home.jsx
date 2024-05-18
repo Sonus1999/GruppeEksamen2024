@@ -17,7 +17,7 @@ export default function Home(){
           .then(data => setTypes(data.results));
       }, [])
 
-      console.log(types)
+      
     return(
         <>
         <section className='pokemondisplay'>
