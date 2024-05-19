@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import '../styles/pokemon.scss'
 
 export default function Pokemon() {
   const { pokemon } = useParams()

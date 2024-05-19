@@ -1,6 +1,7 @@
 import PokeCard from './PokeCard'
 import { useState, useEffect } from 'react'
 import TypeCard from './TypeCard';
+import '../styles/home.scss'
 
 export default function Home(){
     const [pokemon, setPokemon] = useState([])
@@ -19,9 +20,9 @@ export default function Home(){
 
       
     return(
-        <>
+      <>
+        <h1>MAIN POKEMONS</h1>
         <section className='pokemondisplay'>
-            <h1>MAIN POKEMONS</h1>
             {pokemon?.map(singlepoke =>(
                 <PokeCard
                 key={singlepoke.name}
@@ -30,8 +31,9 @@ export default function Home(){
                 ></PokeCard>
             ))}
         </section>
+        
+        <h2>TYPES</h2>
         <section className='typesdisplay'>
-            <h2>TYPES</h2>
             {types?.map(type =>(
                 <TypeCard 
                 key={type.name}
@@ -39,6 +41,6 @@ export default function Home(){
                 </TypeCard>
             ))}
         </section>
-        </>
+      </>
     )
 }

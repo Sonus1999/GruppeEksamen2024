@@ -1,73 +1,39 @@
-img{
-    max-width: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+$font: 'Montserrat', sans-serif;
+
+* {
+  list-style-type: none;
+  padding: 0; 
+  text-decoration: none; 
+  color: inherit;
 }
 
-.pokemondisplay{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+body {
+  font-family: $font;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.typesdisplay{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0rem 4rem 0rem;
+  font-weight: bold;
+
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+      padding: 0; 
+    }
+  }
 }
 
-.normal{
-    background-color: #dce1e6;
-  }
-  .fighting{
-    background-color: #f0c3d0;
-  }
-  .flying{
-    background-color: #dce4f4;
-  }
-  .poison{
-    background-color: #e6caf2;
-  }
-  .ground{
-    background-color: #f2c8b4;
-  }
-  .rock{
-    background-color: #f7eed4;
-  }
-  .bug{
-    background-color: #eaf4d3;
-  }
-  .ghost{
-    background-color: #d0d9f4;
-  }
-  .steel{
-    background-color: #d4edf7;
-  }
-  .fire{
-    background-color: #f4d5bf;
-  }
-  .water{
-    background-color: #cbe1f9;
-  }
-  .grass{
-    background-color: #cdf9c8;
-  }
-  .electric{
-    background-color: #f4eab8;
-  }
-  .psychic{
-    background-color: #f2c2c4;
-  }
-  .ice{
-    background-color: #d6f9f3;
-  }
-  .dragon{
-    background-color: #c6dff4;
-  }
-  .dark{
-    background-color: #d3cae3;
-  }
-  .fairy{
-    background-color: #f9dbf6;
-  }
-  .unknown, .shadow, .stellar{
-    visibility: hidden;
-  }
+input {
+  width: 400px;
+  height: 30px;
+  padding: 5px;
+}

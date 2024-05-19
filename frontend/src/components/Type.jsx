@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import PokeCard from './PokeCard'
+import '../styles/type.scss'
 
 export default function Type() {
   const { type } = useParams()
