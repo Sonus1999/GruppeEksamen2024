@@ -8,7 +8,8 @@ export default function Layout({children}){
 
     const handleSubmit = (e)=> {
         e.preventDefault()
-        navigate(`/searchresults/${search}`)
+        var query = search.toLowerCase()
+        navigate(`/searchresults/${query}`)
     }
     
     
