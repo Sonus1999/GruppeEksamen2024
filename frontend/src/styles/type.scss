@@ -1,7 +1,13 @@
+.type-pokemon-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-
-
-
+  article {
+    flex-basis: calc(30% - 10px);
+    margin-bottom: 10px;
+  }
+}
 
 
 

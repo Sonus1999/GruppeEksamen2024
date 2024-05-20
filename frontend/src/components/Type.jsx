@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import PokeCard from './PokeCard'
 import '../styles/type.scss'
 
@@ -16,14 +16,17 @@ export default function Type() {
   return (
     <>
       <h1>{type}</h1>
-      {pokemon?.map((singlepoke, index) =>(
-              index < 20 && (
-                <PokeCard
-                key={singlepoke.pokemon.name}
-                name={singlepoke.pokemon.name}
-                url={singlepoke.pokemon.url}
-                ></PokeCard>
-            )))}
+      <section className='type-pokemon-display'>
+        {pokemon?.map((singlepoke, index) =>(
+          index < 20 && (
+            <PokeCard
+              key={singlepoke.pokemon.name}
+              name={singlepoke.pokemon.name}
+              url={singlepoke.pokemon.url}
+              type={type}
+            ></PokeCard>
+        )))}
+      </section>
     </>
   )
 }
