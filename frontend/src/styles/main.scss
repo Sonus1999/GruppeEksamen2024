@@ -45,7 +45,7 @@ input {
     position: absolute;
     right: 10px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); //https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY
     background: none;
     border: none;
     font-size: 1.8rem;
