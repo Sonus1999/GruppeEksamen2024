@@ -38,6 +38,38 @@ input {
   padding: 5px;
 }
 
+.search-container {
+  position: relative;
+
+  .search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+  }
+
+  input {
+    padding-right: 40px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 70%;
+
+    .search-button {
+      right: 0px; 
+    }
+
+    input {
+      padding-right: 0px; 
+    }
+  }
+}
+
+
+
 @media screen and (max-width: 800px) {
 
   h1, h2 {
