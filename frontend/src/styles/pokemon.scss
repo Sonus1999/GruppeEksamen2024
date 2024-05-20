@@ -1,0 +1,59 @@
+.pokemon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    h1 {
+        text-transform: uppercase;
+    }
+
+    img {
+        width: 400px;
+    }
+  }
+
+ 
+h2 {
+    text-transform: uppercase;
+}
+  
+  .pokemon-header, .pokemon-types {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 250px;
+  }
+
+  .type-list {
+    border: 1px solid gray;
+    padding: 10px 50px 10px 10px; 
+    margin: 5px 0px 0px 0px; 
+    border-radius: 5px;
+    background-color: rgb(243, 243, 243);
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+  }
+  
+  .stat-value {
+    font-weight: bold;
+  }
+  
+
+  .ability-name {
+    font-weight: bold;
+    text-transform: capitalize;
+
+    p {
+        font-weight: normal;
+        text-transform: none;
+    }
+  }
+  
+  
+  

@@ -27,24 +27,33 @@ export default function Pokemon() {
     <>
       {pokemonInfo ? (
         <section>
-          <h1>{pokemonInfo.name}</h1>
-          <img src={pokemonInfo.sprites.front_default} alt={pokemonInfo.name} />
-          <h2>Types</h2>
-          <ul>
-            {pokemonInfo.types.map((type, index) => (
-              <li key={index}>{type.type.name}</li>
-            ))}
-          </ul>
-          <h2>Stats</h2>
-          <ul>
-            {pokemonInfo.stats.map((stat, index) => (
-              <li key={index}>{stat.stat.name}: {stat.base_stat}</li>
-            ))}
-          </ul>
+          <div className='pokemon-container'>
+            <div className='pokemon-header'>
+              <h1>{pokemonInfo.name}</h1>
+              <img src={pokemonInfo.sprites.front_default} alt={pokemonInfo.name} />
+            </div>
+            <section className='pokemon-types'>
+              <h2>Types</h2>
+              <ul>
+                {pokemonInfo.types.map((type, index) => (
+                  <li key={index} className='type-list'>{type.type.name} </li>
+                ))}
+              </ul>
+              <h2>Stats</h2>
+              <ul>
+                {pokemonInfo.stats.map((stat, index) => (
+                  <li key={index} className='stat-item'>
+                    <span className='stat-name'>{stat.stat.name}:</span>
+                    <span className='stat-value'>{stat.base_stat}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
           <h2>Abilities</h2>
           <ul>
             {abilities.map((ability, index) => (
-              <li key={index}>
+              <li key={index} className='ability-name'>
                 {ability.name}
                 <p>{ability.effect_entries.find(entry => entry.language.name === 'en').effect}</p>
               </li>
@@ -56,4 +65,7 @@ export default function Pokemon() {
       )}
     </>
   )
+  
+  
+  
 }
