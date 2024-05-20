@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import '../styles/search.scss'
 
 export default function SearchResult() {
   const { pokemon } = useParams();
@@ -26,7 +27,7 @@ export default function SearchResult() {
 
 
   return (
-    <div>
+    <div className='search-results'>
       {error ? (
         <p>Finner ikke noen pokemon med navnet "{pokemon}" </p>
       ) : pokemonData ? (

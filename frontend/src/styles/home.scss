@@ -1,21 +1,21 @@
 .pokemondisplay {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  
-    article {
-      flex-basis: calc(30% - 10px);
-      margin-bottom: 10px;
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-  .typesdisplay {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  
-    article {
-      flex-basis: calc(16.66% - 10px);
-      margin-bottom: 10px;
-    }
-  } 
+  article {
+    flex-basis: calc(30% - 10px);
+    margin-bottom: 10px;
+  }
+}
+
+.typesdisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  article {
+    flex-basis: calc(16.66% - 10px);
+    margin-bottom: 10px;
+  }
+} 
