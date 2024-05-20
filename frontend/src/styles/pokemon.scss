@@ -10,6 +10,16 @@
     img {
         width: 400px;
     }
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 0px 250px;
+
+        img {
+            width: 100%;
+        } 
+    }
   }
 
  
@@ -22,6 +32,10 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     margin-right: 250px;
+
+    @media screen and (max-width: 800px) {
+        align-items: center;
+      }
   }
 
   .type-list {
@@ -53,7 +67,10 @@ h2 {
         font-weight: normal;
         text-transform: none;
     }
+
+    @media screen and (max-width: 800px) {
+        text-align: center;
+    }
   }
-  
   
   

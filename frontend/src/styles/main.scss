@@ -37,3 +37,25 @@ input {
   height: 30px;
   padding: 5px;
 }
+
+@media screen and (max-width: 800px) {
+
+  h1, h2 {
+    text-align: center;
+  }
+   
+  article {
+    flex-basis: 100%;
+    padding: 20px;
+  }
+
+
+ 
+  header {
+    flex-direction: column;
+  }
+
+  input {
+    width: 100%;
+  }
+}
