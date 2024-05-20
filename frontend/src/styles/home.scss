@@ -1,7 +1,7 @@
 .pokemondisplay {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
   article {
     flex-basis: calc(30% - 10px);

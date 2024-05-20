@@ -34,9 +34,9 @@ export default function Pokemon() {
             </div>
             <section className='pokemon-types'>
               <h2>Types</h2>
-              <ul>
+              <ul className='type-list'>
                 {pokemonInfo.types.map((type, index) => (
-                  <li key={index} className='type-list'>{type.type.name} </li>
+                  <li key={index} className={type.type.name}>{type.type.name} </li>
                 ))}
               </ul>
               <h2>Stats</h2>
